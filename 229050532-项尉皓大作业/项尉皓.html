@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的美好家乡</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="./jquery-3.6.3.js"></script>
+</head>
+<body>
+    
+    <div class="topline">
+        <div class="top-ner">
+            <div class="welcome">欢迎您来河南焦作！</div>
+            <div class="dlzc">
+                <a href="登录.html">登录</a>|
+                <a href="注册.html">注册</a>
+            </div>
+        </div>
+    </div>
+    <div class="top" style="margin-top: 0px;">
+        <div class="logo" style="margin-left: 10px;">
+        </div>
+        <div class="sous" style="margin-top: 0px;margin-left: 500px;">
+            <form>
+                <input class="input" type="text" value="请输入您想查询的" />
+                <button class="btn" type="submit">搜索</button>
+            </form>
+        </div>
+        
+    <div>
+        <div id="top"><a href="http://hnchenjiagou.cn/product" target="_blank">
+            <img src="大作业/img/chenjiagou.jpeg" width="450" height="400"></a> 
+        <id="center1"><img src="大作业/img/jiaozuo.webp" width="500" height="400">
+        <id="right1"><a href="http://www.yuntaishan.net/" target="_blank">
+            <img src="大作业/img/yuntaishan.webp" width="450" height="400"></a></div>
+    </div>
+
+    <div id="menu">
+        <a href="项尉皓.html">首页</a>
+        <a href="历史.html" target="_blank">历史</a>
+        <a href="风景.html" target="_blank">风景</a>
+        <a href="美食.html" target="_blank">美食</a>
+        <a href="四大怀药.html" target="_blank">四大怀药</a>
+        <a href="武术.html" target="_blank">武术</a>
+        <a href="文化.html" target="_blank">文化</a>
+        <a href="建筑.html" target="_blank">建筑</a>
+
+    </div>
+    <div id="neirong">
+        <div id="right2">
+        <p><b>焦作，古称山阳、怀州，河南省辖地级市，是国务院批复确定的中国中原城市群和豫晋交界地区的区域性中心城市。<br>
+        截至2018年，全市下辖4个区、4个县、代管2个县级市，总面积4071平方公里。根据第七次人口普查数据,焦作市人口<br>
+        截至2020年11月1日零时，焦作市常住人口为3521078人。</p>
+        <p>焦作地处中国华中地区、河南西北部、北依太行山，与山西晋城接壤，南临黄河与郑州、洛阳隔河相望，东临新乡，<br>
+            西临济源，是全国著名的“百年煤城”和老工业基地，国家知识产权试点城市和国家新型工业化示范基地。</p>
+        <p>焦作是华夏民族早期活动的中心区域之一，有裴李岗文化、仰韶文化和龙山文化遗址，是司马懿、韩愈、李商隐、<br>
+           朱载堉、许衡及竹林七贤山涛、向秀等历史文化名人故里 [4]  ，是中国太极拳发源地，拥有云台山、神农山、青天河等<br>
+           3个5A级景区。</b></p></div>
+        <div id="left2"><img src="大作业/img/地图.webp" width="750px" height="350px">
+            <script>
+                // 隐藏图形
+                $('#left2').click(function() {
+                    $('#left2').hide();
+                });
+                // 显示图形
+                $('#left2').click(function() {
+                    $('#left2').show(1000, function() {
+                        $('#left2').css('border-radius', '50%');
+                    });
+                });
+            </script>
+        </div>
+    </div> 
+    <div id="weibu">
+        <a href="#">关于我们</a>
+        <a href="#">联系我们</a>
+        <a href="反馈.html">反馈</a>
+        <a href="#">更多</a>
+        <h1>请评价一下温县</h1>
+        <ul class="comment">
+            <li class="light"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+        <script>
+            //为li元素主持mouseover事件
+            $('.comment>li').mouseover(function(){
+                $(this).addClass('light').prevAll('li').addClass('light');
+                $(this).nextAll('li').removeClass('light');      
+            });
+            //为li元素注册mouseout事件
+            $('.comment>li').mouseout(function(){
+            $('.comment').find('li').removeClass('light')
+            $('.comment>li[light=on]').addClass('light').prevAll('li').addClass('light');
+            });
+            //为li元素注册click事件
+            $('.comment>li').click(function(){
+                $(this).attr('light','on').siblings('li').removeAttr('light');
+            });
+        </script>
+    </div>  
+</body>
+</html>

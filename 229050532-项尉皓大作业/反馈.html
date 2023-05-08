@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>反馈</title>
+        <link href="层次.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="parent">反馈
+			<div id="childone">反馈表单
+				<div>
+                    <input type="advantage" id="advantage" placeholder="您觉得不错的地方：" />
+                </div>
+                <div>
+                    <input type="disadvantage" id="disadvantage" placeholder="您觉得需要改进的地方：" />
+                </div>
+			</div>
+			<div id="childtwo">
+				请选择您的操作
+				<div>
+                    重  置：<input type="reset" value="重置"/><br>
+                    提  交：<input type="submit" value="提交"><br>
+                </div>
+			</div>		
+		</div>
+	</body>
+	<script src="../jquery-3.6.3.js"></script>
+	<script>
+		$(function(){
+			// 父代选择器
+			console.log($("#childtwo").parent("div"))
+			// 子代选择器
+			// console.log($("#parent>div"))
+			// console.log($("#parent").children("div"))
+			// 后代选择器
+			// console.log($("#parent div"))
+			// console.log($("#parent").find("div"))		
+			// 相邻选择器
+			// console.log($("#childone>div+img"))
+			// console.log($("#childone>div").next("img"))
+			// 同辈选择器
+			// console.log($("#childone>div~img"))
+			// console.log($("#childone>div").nextAll("img"))
+			// console.log($("#childone img").siblings("div"))
+			// console.log($("img+div").prev("img"))
+			// console.log($("img+div").prevAll("img"))
+            $(":reset").val("重置按钮");
+			$(":submit").val("提交按钮");
+		})
+	</script>
+</html>
